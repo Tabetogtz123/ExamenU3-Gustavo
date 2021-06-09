@@ -1,4 +1,19 @@
-<div class="container-fluid">
- 
-      <img src="Hulk.png">
+<div class="container mt-5">
+<h3>  Ejemplo</h3>
+<ul>
+      
+     <div *ngFor="let heroe of heroes">
+     <div class="card text-black  " style="max-width: 18rem;" >
+           <div class="card-header">{{ heroe.id}}</div>
+           <td>{{ heroe.nombre}}</td> 
+           <td>{{ heroe.apellidos}}</td> 
+           <td>{{ heroe.genero}}</td>
+           <td>{{ heroe.descripcion}}</td> 
+           <h4 class="card footer text-white  bg-info"> Ver detalles</h4>
+      </div>  
+            
+</div>
+
+</ul>
+
 </div>

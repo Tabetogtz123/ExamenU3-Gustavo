@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './Components/about/about.component';
@@ -10,7 +9,22 @@ import { HeroeTarjetaComponent } from './Components/heroe-tarjeta/heroe-tarjeta.
 import { HeroesComponent } from './Components/heroes/heroes.component';
 import { HomeComponent } from './Components/home/home.component';
 import { NavbarComponent } from './Components/shared/navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+
+  {
+    
+   path:  'heroes',
+    component: HeroesComponent, 
+  
+
+  },
+  {
+    path:  'about',
+    component: AboutComponent, 
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +38,8 @@ import { NavbarComponent } from './Components/shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
